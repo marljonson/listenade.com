@@ -1,0 +1,294 @@
+body {
+   margin: 0;
+   font-family: IBM Plex Sans, Prata, Manrope, Georgia, sans-serif;
+   background: #fff;
+}
+
+.hidden {
+   display:none
+}
+
+.hero {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   justify-content: center;
+   width: 60%;
+   border: 10px inset #e6e6e6;
+   background-color: aliceblue;
+}
+
+.hero-image {
+   padding: 20px 60px;
+}
+
+.topnav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   background-color: #2B3A57;
+   overflow: hidden;
+   padding: 20px;
+   font-family: Manrope;
+   text-align: center;
+}
+
+.topnav a {
+   padding: 10px 15px;
+   font-size: 14px;
+   text-decoration: none;
+   font-weight: bold;
+   color: #B3B3B3;
+   letter-spacing: 1.75px;
+}
+
+.topnav a:hover {
+   color: #FFFFFF;
+   transition: color 0.3s;
+}
+
+.topnav a.active {
+   color: #FFFFFF
+}
+
+.navbar {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 30px 0 5px;
+   background-color: #2B3A57;
+}
+
+.logo-container {
+   display: flex;
+   position: relative;
+   width: 100%;
+   max-height: 100%;
+   justify-content: center;
+   align-items: center;
+}
+
+.logo-container img {
+   display: block;
+   width: 25%;
+   max-height: 50%;
+   align-items: center;
+}
+
+h1 {
+   padding: 10px;
+   padding-left: 15%;
+   padding-right: 15%;
+   font-size: 24px;
+   text-align: center;
+}
+
+h2 {
+   padding: 10px;
+   font-size: 16px;
+   font-weight: lighter;
+   text-align: center;
+}
+
+.writing {
+   padding-top: 20px;
+   padding-bottom: 10px;
+   padding-left: 15%;
+   padding-right: 45%;
+   text-align: left;
+   vertical-align: middle;
+   line-height: 33px;
+   font-size: 1.125rem;
+   font-family: Georgia;
+}
+
+.review-holder {
+   display: flex;
+   padding-left: 15%;
+   padding-right: 15%;
+   gap: 20px;
+   justify-content: center;
+}
+
+.review-page-tile {
+   text-decoration: none;
+   color: #000;
+}
+
+.review {
+   display: block;
+   height: 100%;
+   gap: 10px;
+   width: 100%;
+}
+
+.review:hover :is(.album-title, .review-image) {
+   text-decoration: underline;
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.review:hover :is(.album-artist, .review-author, .review-date) {
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.review-text {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   vertical-align: middle;
+}
+
+.review-text .album-title {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 30px;
+   font-family: Prata;
+   font-size: 24px;
+   vertical-align: middle;
+   font-style: italic;
+   font-weight: bold;
+   padding-top: 35px;
+}
+
+.review-text .album-artist {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 30px;
+   font-family: Georgia;
+   font-size: 20px;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 5px;
+}
+
+.review-text .review-author {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 30px;
+   font-family: IBM Plex Sans;
+   font-size: 14px;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 25px;
+}
+
+.review-text .review-date {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 0px;
+   font-family: IBM Plex Sans;
+   font-size: 14px;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 8px;
+   padding-bottom: 10px;
+}
+
+.review-image img {
+   display: block;
+   width: 100%;
+   margin: auto;
+   filter: drop-shadow(0.25rem 0.05rem 0.25rem rgba(0, 0, 0, 0.075));
+}
+
+.review-page-header {
+   display: flex;
+   padding-top: 60px;
+   padding-bottom: 20px;
+   padding-left: 15%;
+   padding-right: 15%;
+   gap: 20px;
+   justify-content: center;
+   vertical-align: center;
+   align-items: center;
+}
+
+.review-page-header-text {
+   flex: 0.75;
+   text-align: left;
+   vertical-align: middle;
+}
+
+.review-page-header .album-title {
+   flex: 1;
+   text-align: center;
+   font-family: Prata;
+   font-size: 36px;
+   vertical-align: middle;
+   font-style: italic;
+   font-weight: bold;
+   padding: 10px;
+}
+
+.review-page-header .album-artist {
+   flex: 1;
+   text-align: center;
+   font-family: Georgia;
+   font-size: 28px;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 20px;
+}
+
+.review-page-header .album-year {
+   flex: 1;
+   text-align: center;
+   font-family: IBM Plex Sans;
+   font-size: 16px;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 30px;
+}
+
+.review-page-image img {
+   flex: 0.1;
+   display: block;
+   width: 250px;
+   min-width: 100px;
+   justify-content: right;
+}
+
+.review-page-header .album-score {
+   flex: 0.2;
+   text-align: center;
+   font-family: Georgia;
+   font-size: 40px;
+   vertical-align: middle;
+   font-weight: bold;
+}
+
+
+
+.article-head-pic {
+   overflow: hidden;
+   padding-top: 50px;
+   display: block;
+   width: 50%;
+   max-width: 400px;
+   margin: auto;
+}
+
+.purchase {
+   padding: 40px;
+   padding-left: 180px;
+   padding-right: 180px;
+   text-align: left;
+   line-height: 25px;
+}
+
+hr {
+   width: 75%;
+   padding: 20px auto;
+}
+
+button {
+   font-size: 16px;
+   font-family: IBM Plex Sans;
+}
