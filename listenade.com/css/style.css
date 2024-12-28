@@ -1,0 +1,565 @@
+body {
+   margin: 0;
+   font-family: IBM Plex Sans, Prata, Manrope, Georgia, sans-serif;
+   background: #fff;
+}
+
+.hidden {
+   display: none
+}
+
+.hero {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   justify-content: center;
+   width: 35%;
+   border: 10px inset #e6e6e6;
+   background-color: #2B3A57;
+}
+
+.hero-main {
+   justify-content: center;
+   vertical-align: middle;
+   overflow: hidden;
+   position: relative;
+}
+
+.hero-image {
+   padding: 20px 60px;
+}
+
+.hero-main-image {
+   min-height: 105%;
+}
+
+.nav-top-lower {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   background-color: #2B3A57;
+   overflow: hidden;
+   padding: 1.5rem 1.5rem 1.5rem;
+   font-family: Manrope;
+   text-align: center;
+}
+
+.nav-top-lower a {
+   padding: 10px 15px;
+   font-size: 0.875rem;
+   text-decoration: none;
+   font-weight: bold;
+   color: #B3B3B3;
+   letter-spacing: 0.125rem;
+}
+
+.nav-top-lower a:hover {
+   color: #FFFFFF;
+   transition: color 0.3s;
+}
+
+.nav-top-lower a.active {
+   color: #FFFFFF
+}
+
+.nav-top {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 1.875rem 0 5px;
+   background-color: #2B3A57;
+}
+
+.nav-top .logo-container {
+   display: flex;
+   position: relative;
+   width: 100%;
+   max-height: 100%;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav-top .logo-container img {
+   display: block;
+   min-width: 20rem;
+   max-width: 27.5%;
+   align-items: center;
+}
+
+h1 {
+   padding: 1.25rem;
+   padding-left: 15%;
+   padding-right: 15%;
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+h2 {
+   padding: 10px;
+   font-size: 1rem;
+   font-weight: lighter;
+   text-align: center;
+}
+
+.writing {
+   width: 70%;
+   padding-top: 1.25rem;
+   padding-bottom: 0.625rem;
+   padding-left: 15%;
+   padding-right: 15%;
+   text-align: left;
+   vertical-align: middle;
+   line-height: 2.063rem;
+   font-size: 1.125rem;
+   font-family: Georgia;
+   gap: 5rem;
+}
+
+.writing-content {
+   display: flex;
+   justify-content: center;
+   width: 70%;
+   padding-top: 1.25rem;
+   padding-bottom: 0.625rem;
+   padding-left: 15%;
+   padding-right: 15%;
+   vertical-align: middle;
+   line-height: 2.063rem;
+   font-size: 1.125rem;
+   font-family: Georgia;
+   gap: 5rem;
+}
+
+.writing-left {
+   text-align: left;
+   vertical-align: middle;
+   line-height: 33px;
+   font-size: 1.125rem;
+   font-family: Georgia;
+   width: 60%;
+}
+
+.writing-right {
+   text-align: center;
+   vertical-align: middle;
+   line-height: 33px;
+   font-size: 1.125rem;
+   font-family: Georgia;
+   width: 30%;
+   border: 2px dashed #2B3A57;
+}
+
+.writing-right .review-holder {
+   display: flex;
+   padding-left: 10%;
+   padding-right: 10%;
+   gap: 1.25rem;
+   justify-content: center;
+}
+
+.review:hover :is(.album-title, .review-image) {
+   text-decoration: underline;
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.review:hover :is(.album-artist, .review-author, .review-date) {
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.review-holder {
+   display: flex;
+   padding-left: 15%;
+   padding-right: 15%;
+   gap: 1.5rem;
+   justify-content: left;
+}
+
+.review {
+   display: block;
+   height: 100%;
+   gap: 0.625rem;
+   width: 23%;
+}
+
+.review-page-tile {
+   text-decoration: none;
+   color: #000;
+}
+
+.review-image img {
+   display: block;
+   width: 100%;
+   margin: auto;
+   filter: drop-shadow(0.25rem 0.05rem 0.25rem rgba(0, 0, 0, 0.075));
+}
+
+.review-text {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   vertical-align: middle;
+}
+
+.review-text .album-title {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 1.875rem;
+   font-family: Prata;
+   font-size: 1.5rem;
+   vertical-align: middle;
+   font-style: italic;
+   font-weight: bold;
+   padding-top: 35px;
+}
+
+.review-text .album-artist {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 1.875rem;
+   font-family: Georgia;
+   font-size: 1.25rem;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 5px;
+}
+
+.review-text .review-author {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 1.875rem;
+   font-family: IBM Plex Sans;
+   font-size: 0.875rem;
+   font-weight: lighter;
+   vertical-align: bottom;
+   padding-top: 25px;
+}
+
+.review-text .review-date {
+   flex: 1;
+   height: 100%;
+   text-align: left;
+   line-height: 0.875rem;
+   font-family: IBM Plex Sans;
+   font-size: 0.875rem;
+   font-weight: lighter;
+   vertical-align: bottom;
+   padding-bottom: 0.625rem;
+   overflow: hidden;
+   white-space: nowrap;
+}
+
+.review-page-header {
+   display: flex;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-left: 15%;
+   padding-right: 15%;
+   gap: 1.25rem;
+   justify-content: center;
+   vertical-align: center;
+   align-items: center;
+}
+
+.review-page-header-text {
+   flex: 0.75;
+   text-align: left;
+   vertical-align: middle;
+}
+
+.review-page-header .album-title {
+   flex: 1;
+   text-align: center;
+   font-family: Prata;
+   font-size: 2.25rem;
+   vertical-align: middle;
+   font-style: italic;
+   font-weight: bold;
+   padding: 0.625rem;
+}
+
+.review-page-header .album-artist {
+   flex: 1;
+   text-align: center;
+   font-family: Georgia;
+   font-size: 1.75rem;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 1.25rem;
+}
+
+.review-page-header .album-year {
+   flex: 1;
+   text-align: center;
+   font-family: IBM Plex Sans;
+   font-size: 1rem;
+   font-weight: lighter;
+   vertical-align: middle;
+   padding-top: 1.75rem;
+}
+
+.review-page-image img {
+   flex: 0.1;
+   display: block;
+   width: 250px;
+   min-width: 100px;
+   justify-content: right;
+}
+
+.review-page-header .album-score {
+   flex: 0.2;
+   text-align: center;
+   font-family: Georgia;
+   font-size: 2.5rem;
+   vertical-align: middle;
+   font-weight: bold;
+}
+
+
+
+.staff-page-holder {
+   display: flex;
+   justify-content: center;
+   padding-top: 4rem;
+   padding-left: 25%;
+   padding-right: 25%;
+}
+
+.staff-page-text {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   text-align: center;
+}
+
+.staff-page-name {
+   font-family: Prata;
+   font-size: 2.5rem;
+}
+
+.staff-page-role {
+   font-family: IBM Plex Sans;
+   font-size: 1.2rem;
+}
+
+.staff-page-socials {
+   font-family: IBM Plex Sans;
+   font-size: 1.2rem;
+   width: 50%;
+}
+
+
+
+
+.articles-page-holder {
+   display: flex;
+   padding-top: 4rem;
+   padding-left: 25%;
+   padding-right: 25%;
+}
+
+.articles-page-template-a {
+   color: #000;
+   text-decoration: none;
+}
+
+.articles-page-text {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.articles-page-name {
+   font-family: Prata;
+   font-size: 2.5rem;
+   letter-spacing: 0.075rem;
+   text-align: center;
+}
+
+.articles-page-subheader {
+   font-family: IBM Plex Sans;
+   font-size: 1.2rem;
+   padding-top: 0.5rem;
+   text-align: center;
+}
+
+
+
+.articles-page-body {
+   display: flex;
+   padding: 0 15%;
+   justify-content: space-between;
+}
+
+.articles-page-template {
+   display: flex;
+   gap: 3rem;
+   justify-content: space-between;
+}
+
+.articles-page-template .text {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.articles-page-template .title {
+   font-family: Prata;
+   font-size: 1.5rem;
+   line-height: 2.25rem;
+   min-width: 100%;
+}
+
+.articles-page-template .date {
+   font-family: IBM Plex Sans;
+   padding-top: 0.75rem;
+   color: #505050;
+}
+
+.articles-page-template .image {
+   flex-grow: 1;
+}
+
+.articles-page-template .image img {
+   max-width: 100%;
+   border-radius: 0.75rem;
+}
+
+.articles-page-template:hover {
+   opacity: 0.7;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+
+.article-head-pic {
+   padding-top: 2rem;
+   display: block;
+   max-height: 30rem;
+   max-width: 90%;
+   margin: auto;
+}
+
+.purchase {
+   padding: 40px;
+   padding-left: 180px;
+   padding-right: 180px;
+   text-align: left;
+   line-height: 25px;
+}
+
+hr {
+   width: 75%;
+   padding: 20px auto;
+}
+
+
+
+button {
+   font-size: 16px;
+   font-family: IBM Plex Sans;
+}
+
+
+
+.nav-bottom {
+   display: flex;
+   flex-direction: row;
+   gap: 5rem;
+   justify-content: center;
+   /* align-items: center; */
+   position: relative;
+   background-color: #2B3A57;
+   overflow: hidden;
+   padding: 2.5rem 10%;
+   font-family: Manrope;
+}
+
+.nav-bottom .vertical-line {
+   width: 3px;
+   height: auto;
+   background-image: linear-gradient(180deg, rgba(255, 217, 102, 1) 0%, rgba(255, 182, 193, 1) 100%);
+}
+
+.nav-bottom .column-1 a {
+   padding: 0.75rem;
+   font-size: 0.875rem;
+   text-decoration: none;
+   color: #B3B3B3;
+   letter-spacing: 0.125rem;
+}
+
+.nav-bottom .column-1 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.5rem;
+   flex-basis: 30%;
+}
+
+.nav-bottom .column-2 a {
+   text-decoration: none;
+   color: #B3B3B3;
+}
+
+.nav-bottom .column-2 {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   width: fit-content;
+}
+
+.nav-bottom .image {
+   display: flex;
+   justify-content: center;
+   padding-bottom: 0.25rem;
+}
+
+.nav-bottom .image img {
+   display: block;
+   align-items: center;
+   width: 90%
+}
+
+.nav-bottom .all-rights-reserved {
+   font-size: 0.875rem;
+   text-decoration: none;
+   font-weight: bold;
+   color: #B3B3B3;
+   letter-spacing: 0.075rem;
+   font-weight: lighter;
+   width: fit-content;
+}
+
+.nav-bottom a:hover {
+   color: #FFFFFF;
+   transition: color 0.3s;
+}
+
+.nav-bottom .content {
+   text-transform: uppercase;
+   color: #B3B3B3;
+   line-height: 2rem;
+   letter-spacing: 0.075rem;
+   width: fit-content;
+   font-size: 0.875rem;
+}
+
+.nav-bottom .content .title {
+   color: #FFF;
+   font-family: IBM Plex Sans;
+   letter-spacing: 0.05rem;
+   font-size: 1rem;
+}
+
+.legal-text {
+   font-family: IBM Plex Sans;
+   font-size: 1.125rem;
+   line-height: 2.25rem;
+   padding: 4rem 20%;
+}
