@@ -169,24 +169,24 @@ h2 {
    cursor: pointer;
 }
 
-.review-holder {
-   display: flex;
-   padding-left: 15%;
-   padding-right: 15%;
+emptybody {
+   display: grid;
+   width: auto;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   padding-left: 12.5%;
+   padding-right: 12.5%;
    gap: 1.5rem;
-   justify-content: left;
 }
 
 .review {
    display: block;
-   height: 100%;
    gap: 0.625rem;
-   width: 23%;
 }
 
 .review-page-tile {
    text-decoration: none;
    color: #000;
+   width: 25%;
 }
 
 .review-image img {
@@ -198,14 +198,13 @@ h2 {
 
 .review-text {
    flex: 1;
-   height: 100%;
    text-align: left;
    vertical-align: middle;
+   padding-top: 1.625rem;
 }
 
 .review-text .album-title {
    flex: 1;
-   height: 100%;
    text-align: left;
    line-height: 1.875rem;
    font-family: Prata;
@@ -213,43 +212,44 @@ h2 {
    vertical-align: middle;
    font-style: italic;
    font-weight: bold;
-   padding-top: 35px;
 }
 
 .review-text .album-artist {
    flex: 1;
-   height: 100%;
    text-align: left;
-   line-height: 1.875rem;
    font-family: Georgia;
    font-size: 1.25rem;
    font-weight: lighter;
    vertical-align: middle;
-   padding-top: 5px;
+   padding-top: 0.5rem;
 }
 
-.review-text .review-author {
-   flex: 1;
-   height: 100%;
+.review .bottom-texts {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+
+.bottom-texts .review-author {
    text-align: left;
    line-height: 1.875rem;
    font-family: IBM Plex Sans;
    font-size: 0.875rem;
    font-weight: lighter;
    vertical-align: bottom;
-   padding-top: 25px;
+   padding-top: 1.5rem;
+   overflow: hidden;
+   white-space: nowrap;
 }
 
-.review-text .review-date {
-   flex: 1;
-   height: 100%;
+.bottom-texts .review-date {
    text-align: left;
    line-height: 0.875rem;
    font-family: IBM Plex Sans;
    font-size: 0.875rem;
    font-weight: lighter;
    vertical-align: bottom;
-   padding-bottom: 0.625rem;
+   padding-bottom: 1.125rem;
    overflow: hidden;
    white-space: nowrap;
 }
@@ -498,7 +498,7 @@ button {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 0.5rem;
+   gap: 0.875rem;
    flex-basis: 30%;
 }
 
@@ -562,4 +562,9 @@ button {
    font-size: 1.125rem;
    line-height: 2.25rem;
    padding: 4rem 20%;
+}
+
+.full-instagram-embed {
+   display: flex;
+   justify-content: center;
 }
