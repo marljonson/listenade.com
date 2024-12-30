@@ -2,6 +2,7 @@ body {
    margin: 0;
    font-family: IBM Plex Sans, Prata, Manrope, Georgia, sans-serif;
    background: #fff;
+   overflow-y: scroll;
 }
 
 .hidden {
@@ -26,24 +27,26 @@ body {
 }
 
 .hero-image {
-   padding: 20px 60px;
+   padding: 2rem 3rem;
 }
 
 .hero-main-image {
-   min-height: 105%;
+   width: 100%;
 }
 
 .nav-top-lower {
    display: flex;
    justify-content: center;
    align-items: center;
-   position: relative;
-   background-color: #2B3A57;
+   background: linear-gradient(90deg, #FFD966 0%, #2B3A57 35%, #2B3A57 65%, #FFB6C1 100%);
    overflow: hidden;
-   padding: 1.5rem 1rem 1.5rem;
+   padding: 1rem;
    font-family: Manrope;
    text-align: center;
    line-height: 2rem;
+   position: sticky;
+   z-index: 99;
+   top: 0px;
 }
 
 .nav-top-lower a {
@@ -69,7 +72,7 @@ body {
    flex-direction: column;
    align-items: center;
    padding: 1.875rem 0 5px;
-   background-color: #2B3A57;
+   background: linear-gradient(90deg, #FFD966 0%, #2B3A57 35%, #2B3A57 65%, #FFB6C1 100%);
 }
 
 .nav-top .logo-container {
@@ -104,75 +107,147 @@ h2 {
 }
 
 .writing {
-   width: 70%;
-   padding-top: 1.25rem;
-   padding-bottom: 0.625rem;
-   padding-left: 15%;
-   padding-right: 15%;
+   padding: 1.25rem 7.5% 0.625rem 7.5%;
    text-align: left;
    vertical-align: middle;
    line-height: 2.063rem;
    font-size: 1.125rem;
-   font-family: Georgia;
+   font-family: Open Sans;
    gap: 5rem;
 }
 
 .writing-content {
    display: flex;
    justify-content: center;
-   width: 70%;
    padding-top: 1.25rem;
    padding-bottom: 0.625rem;
-   padding-left: 15%;
-   padding-right: 15%;
+   padding-left: 7.5%;
+   padding-right: 7.5%;
    vertical-align: middle;
    line-height: 2.063rem;
    font-size: 1.125rem;
-   font-family: Georgia;
+   font-family: Open Sans;
    gap: 5rem;
 }
 
 .writing-left {
    text-align: left;
    vertical-align: middle;
-   line-height: 33px;
-   font-size: 1.125rem;
-   font-family: Georgia;
+   line-height: 1.925rem;
+   font-size: 0.935rem;
+   font-family: Open Sans, Georgia;
    width: 60%;
 }
 
+
+
+
 .writing-right {
+   display: grid;
+   flex-direction: column;
+   align-items: center;
    text-align: center;
-   vertical-align: middle;
+   vertical-align: top;
    line-height: 33px;
    font-size: 1.125rem;
-   font-family: Georgia;
-   width: 30%;
-   border: 2px dashed #2B3A57;
+   font-family: Open Sans;
+   width: 25%;
+}
+
+.writing-right hr {
+   width: 100%;
 }
 
 .writing-right .review-holder {
    display: flex;
-   padding-left: 10%;
-   padding-right: 10%;
+   flex-direction: column;
+   align-items: center;
    gap: 1.25rem;
-   justify-content: center;
+   width: 100%;
+   height: fit-content;
+   vertical-align: top;
 }
 
+.writing-right .review {
+   display: flex;
+   gap: 0;
+   padding: 0;
+}
+
+.writing-right .review-page-tile {
+   display: flex;
+   text-decoration: none;
+   color: #000;
+   width: 100%;
+   background-color: #ffb6c173;
+}
+
+.writing-right .review-image {   
+   max-width: 50%;
+}
+
+.writing-right .review-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: 50%;
+}
+
+.writing-right .review-text {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   padding: 0.875rem;
+   gap: 0rem;
+}
+
+.writing-right .review-holder {
+   width: 100%;
+}
+
+.writing-right .album-title {
+   display: block;
+}
+
+.writing-right .album-artist {
+   display: block;
+   padding-top: 0rem
+   padding-bottom: 1.125rem;
+}
+
+.writing-right :is(.review-author, .review-date) {
+   display: block;
+   font-size: 0.875rem;
+   line-height: 2rem;
+}
+
+
+
 .review:hover :is(.album-title) {
-   opacity: 0.7;
+   opacity: 0.65;
    text-decoration: underline;
-   font-size: 1.6em;
+   font-size: 1.55rem;
    overflow: visible;
    cursor: pointer;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
    transition:
-      opacity 0.05s ease-out,
-      font-size 0.15s,
+      opacity 0.05s,
+      font-size 0.125s;
+}
+
+.review:hover :is(.album-artist, .review-author, .review-date) {
+   opacity: 0.55;
+   cursor: pointer;
+   transition:
+      opacity 0.05s;
+   font-size: 0.25s;
 }
 
 .review:hover :is(.review-image) {
    opacity: 0.7;
-   rotate: 1.5deg;
+   rotate: -1.35deg;
    cursor: pointer;
    transition:
       opacity 0.05s ease-out,
@@ -220,21 +295,26 @@ emptybody {
    font-family: Prata;
    font-size: 1.5rem;
    vertical-align: middle;
-   font-style: italic;
+   transform: skewX(-6deg);
    font-weight: bold;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
+   background-image: linear-gradient(22.5deg, rgba(10, 0, 30, 1) 0%, rgba(25, 40, 70, 1) 50%);
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
 }
 
 .review-text .album-artist {
    flex: 1;
    text-align: left;
-   font-family: Georgia;
-   font-size: 1.25rem;
+   font-family: IBM Plex Sans;
+   font-size: 1.125rem;
    font-weight: lighter;
    vertical-align: middle;
-   padding-top: 0.5rem;
+   padding-top: 0.425rem;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
@@ -294,7 +374,7 @@ emptybody {
    font-family: Prata;
    font-size: 2.25rem;
    vertical-align: middle;
-   font-style: italic;
+   transform: skewX(-6deg);
    font-weight: bold;
    padding: 0.625rem;
 }
@@ -471,10 +551,8 @@ emptybody {
 
 hr {
    width: 75%;
-   padding: 20px auto;
+   padding: 1.25rem auto;
 }
-
-
 
 button {
    font-size: 16px;
@@ -502,20 +580,20 @@ button {
    background-image: linear-gradient(180deg, rgba(255, 217, 102, 1) 0%, rgba(255, 182, 193, 1) 100%);
 }
 
-.nav-bottom .column-1 a {
-   padding: 0.75rem;
-   font-size: 0.875rem;
-   text-decoration: none;
-   color: #B3B3B3;
-   letter-spacing: 0.125rem;
-}
-
 .nav-bottom .column-1 {
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 0.875rem;
    flex-basis: 30%;
+}
+
+.nav-bottom .column-1 a {
+   padding: 0.75rem;
+   font-size: 0.875rem;
+   text-decoration: none;
+   color: #B3B3B3;
+   letter-spacing: 0.125rem;
 }
 
 .nav-bottom .column-2 a {
@@ -548,6 +626,7 @@ button {
       flex-direction: column;
       padding: 2rem 5%;
       gap: 2rem;
+      vertical-align: middle;
    }
 
    .nav-bottom .all-rights-reserved {
@@ -559,7 +638,7 @@ button {
       font-size: 1.5rem;
    }
 
-   .nav-bottom .column-1, 
+   .nav-bottom .column-1,
    .nav-bottom .column-2 {
       align-items: left;
       padding: 0 10%;
@@ -569,6 +648,29 @@ button {
    .nav-bottom .column-1 .content,
    .nav-bottom .column-2 .content {
       font-size: 1.125rem;
+   }
+
+   .writing-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 1.25rem;
+      padding-bottom: 0.625rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      vertical-align: middle;
+      line-height: 2.063rem;
+      font-size: 1.125rem;
+      font-family: Georgia;
+      gap: 5rem;
+   }
+
+   .writing-left {
+      text-align: left;
+      vertical-align: middle;
+      line-height: 33px;
+      font-size: 1.125rem;
+      font-family: Open Sans;
    }
 }
 
@@ -585,6 +687,7 @@ button {
 }
 
 .nav-bottom .all-rights-reserved {
+   text-align: center;
    font-size: 0.875rem;
    text-decoration: none;
    font-weight: bold;
@@ -625,4 +728,10 @@ button {
 .full-instagram-embed {
    display: flex;
    justify-content: center;
+   padding: 0 4rem;
+}
+
+.album-artist a {
+   text-decoration: none;
+   color: #000;
 }

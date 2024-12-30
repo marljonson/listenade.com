@@ -24,6 +24,17 @@ function loadNavbars() {
                 console.error('Error loading the navbar:', error);
             });
     }
+
+    // Loop through the reviews array and create review divs
+    const myFonts = document.createElement('span');
+    myFonts.innerHTML = `
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prata">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        `;
+    document.head.appendChild(myFonts);
 }
 
 // Run the loadNavbarTop and loadNavbarBottom functions when the page has finished loading
