@@ -1,7 +1,8 @@
 body {
    margin: 0;
    font-family: IBM Plex Sans, Prata, Manrope, Georgia, sans-serif;
-   background: #fff;
+   background: #F4F4F4;
+   overflow: hidden;
    overflow-y: scroll;
 }
 
@@ -32,6 +33,76 @@ body {
 
 .hero-main-image {
    width: 100%;
+}
+
+
+
+.navigation-top {
+   display: flex;
+   padding: 1.5rem 0 1.5rem;
+   color: #FFF;
+   background: linear-gradient(90deg, #2B3A57 85%, #FFD966 100%);
+   position: sticky;
+   z-index: 1000;
+   top: 0;
+}
+
+.navigation-top > .content {
+   display: flex;
+   flex-direction: row;
+   padding: 0 2.5%;
+   gap: 2.5rem;
+   align-items: center;
+}
+
+.navigation-top > .content > .wordmark {
+   display: flex;
+   align-items: center;
+   width: 20%;
+}
+
+.navigation-top > .content > .wordmark img {
+   display: block;
+   width: 100%;
+}
+
+.navigation-top > .content > .links {
+   display: flex;
+   flex-direction: row;
+   height: calc(100% + 3rem);
+   width: 50%;
+   align-items: center;
+}
+
+.navigation-top > .content > .links > a {
+   display: flex;
+   align-items: center;
+   padding: 0 0.75rem;
+   font-family: Manrope, sans-serif;
+   font-size: 1.375rem;
+   letter-spacing: 0.1rem;
+   text-decoration: none;
+   height: 100%;
+   color: #B3B3B3;
+   width: max-content;
+}
+
+.navigation-top > .content > .links > a:hover {
+   background: #43567a;
+   color: #FFF;
+   transition: 0.3s;
+}
+
+
+
+
+
+.nav-top {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 1.875rem 0 0.5rem;
+   background: linear-gradient(90deg, #FFD966 0%, #2B3A57 35%, #2B3A57 65%, #FFB6C1 100%);
 }
 
 .nav-top-lower {
@@ -65,14 +136,6 @@ body {
 
 .nav-top-lower a.active {
    color: #FFFFFF
-}
-
-.nav-top {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding: 1.875rem 0 5px;
-   background: linear-gradient(90deg, #FFD966 0%, #2B3A57 35%, #2B3A57 65%, #FFB6C1 100%);
 }
 
 .nav-top .logo-container {
@@ -127,16 +190,31 @@ h2 {
    line-height: 2.063rem;
    font-size: 1.125rem;
    font-family: Open Sans;
-   gap: 5rem;
+   gap: 4.5rem;
 }
 
 .writing-left {
    text-align: left;
    vertical-align: middle;
-   line-height: 1.925rem;
-   font-size: 0.935rem;
-   font-family: Open Sans, Georgia;
-   width: 60%;
+   line-height: 1.75rem;
+   font-size: 1.04rem;
+   font-family: IBM Plex Sans, Georgia, serif;
+   width: 50%;
+}
+
+.writing-left a {
+   text-decoration: underline;
+   color: #000
+}
+
+.writing-left a:hover {
+   color: #FF4444;
+   transition: 0.15s;
+}
+
+.writing-content > .vertical-line {
+   width: 2px;
+   background: #B3B3B3;
 }
 
 
@@ -211,7 +289,7 @@ h2 {
 
 .writing-right .album-artist {
    display: block;
-   padding-top: 0rem
+   padding-top: 0rem;
    padding-bottom: 1.125rem;
 }
 
@@ -224,7 +302,7 @@ h2 {
 
 
 .review:hover :is(.album-title) {
-   opacity: 0.65;
+   opacity: 0.7;
    text-decoration: underline;
    font-size: 1.55rem;
    overflow: visible;
@@ -237,21 +315,44 @@ h2 {
       font-size 0.125s;
 }
 
+.review:not(hover) :is(.album-title) {
+   opacity: 1;
+   text-decoration: none;
+   font-size: 1.5rem;
+   overflow: visible;
+   cursor: pointer;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   transition:
+      opacity 0.05s,
+      font-size 0.125s;
+}
+
+
 .review:hover :is(.album-artist, .review-author, .review-date) {
-   opacity: 0.55;
+   opacity: 0.65;
    cursor: pointer;
    transition:
       opacity 0.05s;
-   font-size: 0.25s;
 }
 
 .review:hover :is(.review-image) {
-   opacity: 0.7;
-   rotate: -1.35deg;
+   opacity: 0.8;
    cursor: pointer;
+   transform: rotate3d(-0.65, 0.1, -0.05, 0.05turn) scale(0.925, 0.925);
    transition:
-      opacity 0.05s ease-out,
-      rotate 0.075s ease-out;
+      opacity 0.075s,
+      transform 0.275s;
+}
+
+.review:not(hover) :is(.review-image) {
+   opacity: 1;
+   rotate: 0deg;
+   transform: none;
+   transition:
+      opacity 0.075s,
+      transform 0.275s;
 }
 
 emptybody {
@@ -318,6 +419,15 @@ emptybody {
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
+}
+
+.review-text a {
+   text-decoration: none;
+   color: #000;
+}
+
+.review-text a:hover {
+   text-decoration: underline;
 }
 
 .review .bottom-texts {
@@ -400,11 +510,10 @@ emptybody {
 }
 
 .review-page-image img {
-   flex: 0.1;
    display: block;
-   width: 250px;
+   height: 250px;
    min-width: 100px;
-   justify-content: right;
+   justify-content: center;
 }
 
 .review-page-header .album-score {
