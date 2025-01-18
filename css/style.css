@@ -914,7 +914,6 @@ button {
    flex-direction: row;
    width: 85%;
    gap: 3rem;
-   align-items: center;
    justify-content: center;
 }
 
@@ -973,12 +972,12 @@ button {
    display: block;
    width: 100%;
    border-radius: 1rem;
+   padding-bottom: 1.25rem;
 }
 
 .front-page-container .title {
    font-family: Prata;
    font-size: 2rem;
-   padding-top: 1.25rem;
 }
 
 .front-page-container .desc {
