@@ -29,7 +29,7 @@ reviews.slice().reverse().forEach((review, index) => {
                     </div>
                 </div>
                 <div class="bottom-texts">
-                    <div class="review-author">
+                    <div class="review-author" style="padding-top: 0">
                         by ${review.author}
                     </div>
                     <div class="review-date">

@@ -133,7 +133,7 @@ const reviews = [
         albumTitle: "Mirror Starts Moving Without Me",
         albumArtist: "Pom Pom Squad",
         author: "Marl Jonson",
-        reviewDate: "December 29, 2024"
+        reviewDate: "January 3, 2025"
     },
     {
         href: "/reviews/blood-cultures-happy-birthday/",
@@ -141,6 +141,6 @@ const reviews = [
         albumTitle: "Happy Birthday",
         albumArtist: "Blood Cultures",
         author: "Marl Jonson",
-        reviewDate: "December 29, 2024"
+        reviewDate: "January 3, 2025"
     }
 ];

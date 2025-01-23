@@ -14,9 +14,11 @@ reviews.slice().reverse().forEach((review, index) => {
                     <div class="album-title">
                         ${review.albumTitle}
                     </div>
-                    <div class="album-artist">
-                        ${review.albumArtist}
-                    </div>
+                    <a href="/artists/${review.albumArtist.toLowerCase().replace(/\s+/g, '-')}/">
+                        <div class="album-artist">
+                            ${review.albumArtist}
+                        </div>
+                    </a>
                 </div>
                 <div class="bottom-texts">
                     <div class="review-author">
