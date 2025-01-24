@@ -57,13 +57,13 @@ table, tr, th {
    position: sticky;
    z-index: 99;
    top: 0;
+   transition: top 0.75s;
 }
 
 .navigation-top {
-   display: flex;
-   padding: 1.5rem 0 1.5rem;
    color: #FFF;
-   background: linear-gradient(90deg, #2B3A57 72.5%, #FFD966 100%);
+   background: #000;
+   /*linear-gradient(90deg, #2B3A57 72.5%, #FFD966 100%);*/
    position: sticky;
    z-index: 99;
    top: 0;
@@ -71,35 +71,44 @@ table, tr, th {
 
 .navigation-top > .content {
    display: flex;
-   flex-direction: row;
-   padding: 0 2.5%;
-   gap: 2rem;
+   flex-direction: column;
    align-items: center;
+   padding: 0 2.5%;
+   gap: 1.25rem;
+   height: 100%;
 }
 
 .navigation-top > .content > .wordmark {
    display: flex;
    align-items: center;
-   width: 12.5%;
+   width: 10.5rem;
+
+   position: absolute;
+   top: 50%;
+   left: 1rem; /* Anchors it to the left */
+   transform: translateY(-50%);
 }
 
 .navigation-top > .content > .wordmark img {
    display: block;
    width: 100%;
+   height: 100%;
 }
 
 .navigation-top > .content > .links {
    display: flex;
    flex-direction: row;
-   height: calc(100% + 3rem);
-   width: 50%;
+   align-self: center;
+   height: 100%;
+   width: fit-content;
    align-items: center;
 }
 
 .navigation-top > .content > .links > a {
    display: flex;
+   flex-direction: column;
    align-items: center;
-   padding: 0 0.75rem;
+   padding: 1.25rem 1.125rem 1.25rem;
    font-family: Manrope, sans-serif;
    font-size: 1rem;
    font-weight: bold;
@@ -107,13 +116,18 @@ table, tr, th {
    text-decoration: none;
    height: 100%;
    color: #B3B3B3;
-   width: max-content;
 }
 
 .navigation-top > .content > .links > a:hover {
-   background: #43567a;
-   color: #FFF;
-   transition: 0.3s;
+   background: linear-gradient(90deg, #ecc552 0%, #FFB6C1 100%);
+   color: #000;
+   transition: 0s;
+}
+
+.navigation-top > .content > .links > a:not(hover) {
+   background: linear-gradient(90deg, #000 0%);
+   color: #B3B3B3;
+   transition: 0s;
 }
 
 
@@ -125,14 +139,14 @@ table, tr, th {
    flex-direction: column;
    align-items: center;
    padding: 1.875rem 0 0.5rem;
-   background: linear-gradient(90deg, #FFD966 0%, #2B3A57 35%, #2B3A57 65%, #FFB6C1 100%);
+   background: #000
 }
 
 .nav-top-lower {
    display: flex;
    justify-content: center;
    align-items: center;
-   background: linear-gradient(90deg, #FFD966 0%, #2B3A57 35%, #2B3A57 65%, #FFB6C1 100%);
+   background: #000;
    overflow: hidden;
    padding: 1rem;
    font-family: Manrope;
@@ -252,8 +266,8 @@ h2 {
 .writing-left a:not(hover) {
    color: #000;
    transition: 0.15s;
+   transition: color 0.3s;
 }
-transition: color 0.3s;
 
 .writing-content > .vertical-line {
    width: 2px;
@@ -577,10 +591,11 @@ emptybody {
 
 .staff-page-holder {
    display: flex;
+   flex-direction: column;
+   align-items: center;
    padding-top: 4rem;
    padding-left: 25%;
    padding-right: 25%;
-   align-content: center;
 }
 
 .staff-page-text {
@@ -726,7 +741,7 @@ button {
    justify-content: center;
    /* align-items: center; */
    position: relative;
-   background-color: #2B3A57;
+   background-color: #000;
    overflow: hidden;
    padding: 2.5rem 10%;
    font-family: acumin-variable, Manrope;

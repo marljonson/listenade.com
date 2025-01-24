@@ -10,7 +10,7 @@ const reviews = [
     {
         href: "/reviews/paramore-riot/",
         reviewImage: "/assets/paramore_riot.png",
-        albumTitle: "Riot!",
+        albumTitle: "Riot",
         albumArtist: "Paramore",
         author: "Marl Jonson",
         reviewDate: "December 20, 2024"

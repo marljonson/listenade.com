@@ -37,8 +37,12 @@
     <br>
     <hr>
     <br>
-
-    <div class="writing">
+    <div class="writing-content">
+    <div class="writing-left">
+        <div class="tldr">
+            <b>[TL;DR]</b><br>Here lies country: <i>1989</i> witnesses Taylor Swift's fully fledged foray into the other half of country-pop. It's palpable, polished, packaged—penultimate pop.
+        </div>
+        <br>
         <i>1989</i> marks a clear departure from Taylor Swift’s country roots. Here, she dives headfirst into a vibrant,
         '80s-inspired pop sound. The album opens strong with tracks like "Welcome to New York," which sets the stage for
         a bold new chapter in her career. It’s glossy, sleek, and full of catchy hooks that get stuck in your head.
@@ -57,6 +61,7 @@
         Favorite song: <a href="https://www.youtube.com/watch?v=JLf9q36UsBk">"Out of the Woods"</a>
         <br><br>
     </div>
+    </div>
 
     <br>
     <hr>
@@ -65,3 +70,17 @@
     <br>
     <div id="navbar-top"></div>
 </body>
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar-top").style.top = "0";
+        }
+        else {
+        document.getElementById("navbar-top").style.top = "calc(-12.5%)";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
