@@ -33,9 +33,39 @@
     </div>
     <br>
     <br>
-    <emptybody></emptybody>
+    <input class="page-search" type="text" id="review-page-search" onkeyup="searchReviews()" placeholder="Search for a review by title or artist"></input>
+    <br>
+    <br>
+    <emptybody id="emptybody"></emptybody>
     <div id="navbar-bottom"></div>
 </body>
 
 <script src="/reviews.js"></script>
 <script src="/formatReviewPage.js"></script>
+<script>
+    function searchReviews() {
+        var input = document.getElementById("review-page-search");
+        var filter = input.value.toUpperCase();
+        var emptybody = document.getElementById("emptybody");
+        var reviewAdd = emptybody.getElementsByClassName("review-add");
+
+        // Loop through each review-add element
+        for (var i = 0; i < reviewAdd.length; i++) {
+            var review = reviewAdd[i].getElementsByClassName("review")[0];
+            var review_text = review.getElementsByClassName("review-text")[0];
+            var title = review_text.getElementsByClassName("album-title")[0];
+            var artist = review_text.getElementsByClassName("album-artist")[0];
+
+            var titleText = title.textContent || title.innerText;
+            var artistText = artist.textContent || artist.innerText;
+
+            // Check if title or artist contains the search query
+            if (titleText.toUpperCase().indexOf(filter) > -1 || artistText.toUpperCase().indexOf(filter) > -1) {
+                reviewAdd[i].style.display = ""; // Show review if it matches
+            } else {
+                reviewAdd[i].style.display = "none"; // Hide review if it doesn't match
+            }
+        }
+    }
+    document.getElementById("review-page-search").addEventListener("input", searchReviews);
+</script>

@@ -3,12 +3,13 @@ const emptyBody = document.querySelector('emptybody');
 // Loop through the reviews array and create review divs
 reviews.slice().reverse().forEach((review, index) => {
     const reviewDiv = document.createElement('div');
+    reviewDiv.classList.add("review-add"); 
 
     reviewDiv.innerHTML = `
         <div class="review">
             <a class="review-page-tile" href="${review.href}">
                 <div class="review-image">
-                    <img src="${review.reviewImage}">
+                    <img style="max-width: 16rem; align-self: left;" src="${review.reviewImage}">
                 </div>
                 <div class="review-text">
                     <div class="album-title">

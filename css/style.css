@@ -119,15 +119,15 @@ table, tr, th {
 }
 
 .navigation-top > .content > .links > a:hover {
-   background: linear-gradient(90deg, #ecc552 0%, #FFB6C1 100%);
-   color: #000;
-   transition: 0s;
+   background: #6b6b6b;
+   color: #FFF;
+   transition: 0.2s;
 }
 
 .navigation-top > .content > .links > a:not(hover) {
    background: linear-gradient(90deg, #000 0%);
    color: #B3B3B3;
-   transition: 0s;
+   transition: 0.2s;
 }
 
 
@@ -1097,4 +1097,20 @@ button {
    width: 16rem;
    height: 100%;
    border: 2px dashed #2B3A57;
+}
+
+.page-search {
+   border: 0.5px solid #2b3a574b;
+   background-color: #e6e6e6;
+   width: 50%;
+   font-family: acumin-variable;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0.4rem 0.5rem;
+   padding-left: 0.75rem;
+   font-size: 1.25rem;
+   border-radius: 0.75rem;
 }
