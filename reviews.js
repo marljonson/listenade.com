@@ -142,5 +142,13 @@ const reviews = [
         albumArtist: "Blood Cultures",
         author: "Marl Jonson",
         reviewDate: "January 3, 2025"
+    },
+    {
+        href: "/reviews/basement-jaxx-rooty/",
+        reviewImage: "/assets/basementjaxx_rooty.jpg",
+        albumTitle: "Rooty",
+        albumArtist: "Basement Jaxx",
+        author: "Marl Jonson",
+        reviewDate: "January 31, 2025"
     }
 ];
