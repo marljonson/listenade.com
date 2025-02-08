@@ -16,6 +16,98 @@
    font-stretch: normal;
 }
 
+@media (max-width: 432px) {
+   .writing-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+      gap: 1.5rem;
+      justify-content: center;
+      padding-top: 1.25rem;
+      padding-bottom: 0.625rem;
+      vertical-align: middle;
+      line-height: 2.063rem;
+      font-size: 1.125rem;
+      font-family: Georgia;
+      gap: 5rem;
+   }
+
+   .writing-left {
+      text-align: left;
+      vertical-align: middle;
+      line-height: 33px;
+      font-size: 1.125rem;
+      font-family: Source Sans Pro, Open Sans;
+      width: 100%
+   }
+}
+
+@media (max-width: 768px) {
+   emptybody {
+      display: grid;
+      width: auto;
+      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+      padding-left: 7.5%;
+      padding-right: 7.5%;
+      gap: 1.5rem;
+   }
+
+   .nav-top-lower {
+      padding: 0.75rem;
+   }
+
+   .writing {
+      display: grid;
+      padding: 1.25rem 7.5% 0.625rem 7.5%;
+      text-align: left;
+      vertical-align: middle;
+      line-height: 2.063rem;
+      font-size: 1.125rem;
+      font-family: freight-text-pro;
+      gap: 5rem;
+   }
+
+   .writing-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      padding-left: 5%;
+      padding-right: 5%;
+      gap: 1.5rem;
+      justify-content: center;
+      padding-top: 1.25rem;
+      padding-bottom: 0.625rem;
+      vertical-align: middle;
+      line-height: 2.063rem;
+      font-size: 1.125rem;
+      font-family: Georgia;
+      gap: 5rem;
+   }
+
+   .writing-left {
+      text-align: left;
+      vertical-align: middle;
+      line-height: 33px;
+      font-size: 1.125rem;
+      font-family: Source Sans Pro, Open Sans;
+   }
+
+   .writing-right {
+      display: grid;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      vertical-align: top;
+      line-height: 33px;
+      font-size: 1.125rem;
+      font-family: Open Sans;
+      width: 25%;
+   }
+}
+
 body {
    margin: 0;
    font-family: acumin-variable, freight-text-pro, IBM Plex Sans, Prata, Manrope, Georgia, sans-serif;
@@ -832,69 +924,6 @@ button {
       overflow: hidden;
       white-space: nowrap;
       font-size: 1.125rem;
-   }
-}
-
-@media (max-width: 768px) {
-   emptybody {
-      display: grid;
-      width: auto;
-      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-      padding-left: 7.5%;
-      padding-right: 7.5%;
-      gap: 1.5rem;
-   }
-
-   .nav-top-lower {
-      padding: 0.75rem;
-   }
-
-   .writing {
-      display: grid;
-      padding: 1.25rem 7.5% 0.625rem 7.5%;
-      text-align: left;
-      vertical-align: middle;
-      line-height: 2.063rem;
-      font-size: 1.125rem;
-      font-family: freight-text-pro;
-      gap: 5rem;
-   }
-
-   .writing-content {
-      display: grid;
-      width: auto;
-      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-      padding-left: 5%;
-      padding-right: 5%;
-      gap: 1.5rem;
-      justify-content: center;
-      padding-top: 1.25rem;
-      padding-bottom: 0.625rem;
-      vertical-align: middle;
-      line-height: 2.063rem;
-      font-size: 1.125rem;
-      font-family: Georgia;
-      gap: 5rem;
-   }
-
-   .writing-left {
-      text-align: left;
-      vertical-align: middle;
-      line-height: 33px;
-      font-size: 1.125rem;
-      font-family: Source Sans Pro, Open Sans;
-   }
-
-   .writing-right {
-      display: grid;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      vertical-align: top;
-      line-height: 33px;
-      font-size: 1.125rem;
-      font-family: Open Sans;
-      width: 25%;
    }
 }
 

@@ -1,5 +1,6 @@
 const reviews = [
     {
+        id: 0,
         href: "/reviews/paramore-all-we-know-is-falling/",
         reviewImage: "/assets/paramore_allweknowisfalling.png",
         albumTitle: "All We Know is Falling",
@@ -8,6 +9,7 @@ const reviews = [
         reviewDate: "December 20, 2024"
     },
     {
+        id: 1,
         href: "/reviews/paramore-riot/",
         reviewImage: "/assets/paramore_riot.png",
         albumTitle: "Riot",
@@ -16,6 +18,7 @@ const reviews = [
         reviewDate: "December 20, 2024"
     },
     {
+        id: 2,
         href: "/reviews/paramore-brand-new-eyes/",
         reviewImage: "/assets/paramore_brandneweyes.jpg",
         albumTitle: "Brand New Eyes",
@@ -24,6 +27,7 @@ const reviews = [
         reviewDate: "December 20, 2024"
     },
     {
+        id: 3,
         href: "/reviews/paramore-paramore/",
         reviewImage: "/assets/paramore_paramore.jpg",
         albumTitle: "Paramore",
@@ -32,6 +36,7 @@ const reviews = [
         reviewDate: "December 20, 2024"
     },
     {
+        id: 4,
         href: "/reviews/taylor-swift-speak-now/",
         reviewImage: "/assets/taylorswift_speaknow.png",
         albumTitle: "Speak Now",
@@ -40,6 +45,7 @@ const reviews = [
         reviewDate: "December 21, 2024"
     },
     {
+        id: 5,
         href: "/reviews/taylor-swift-red/",
         reviewImage: "/assets/taylorswift_red.jpg",
         albumTitle: "Red",
@@ -48,6 +54,7 @@ const reviews = [
         reviewDate: "December 21, 2024"
     },
     {
+        id: 6,
         href: "/reviews/taylor-swift-1989/",
         reviewImage: "/assets/taylorswift_1989.png",
         albumTitle: "1989",
@@ -56,6 +63,7 @@ const reviews = [
         reviewDate: "December 21, 2024"
     },
     {
+        id: 7,
         href: "/reviews/taylor-swift-lover/",
         reviewImage: "/assets/taylorswift_lover.png",
         albumTitle: "Lover",
@@ -64,6 +72,7 @@ const reviews = [
         reviewDate: "December 21, 2024"
     },
     {
+        id: 8,
         href: "/reviews/kanye-west-graduation/",
         reviewImage: "/assets/kanyewest_graduation.jpg",
         albumTitle: "Graduation",
@@ -72,6 +81,7 @@ const reviews = [
         reviewDate: "December 22, 2024"
     },
     {
+        id: 9,
         href: "/reviews/olivia-rodrigo-guts/",
         reviewImage: "/assets/oliviarodrigo_guts.jpg",
         albumTitle: "Guts",
@@ -80,6 +90,7 @@ const reviews = [
         reviewDate: "December 22, 2024"
     },
     {
+        id: 10,
         href: "/reviews/clairo-immunity/",
         reviewImage: "/assets/clairo_immunity.jpeg",
         albumTitle: "Immunity",
@@ -88,6 +99,7 @@ const reviews = [
         reviewDate: "December 22, 2024"
     },
     {
+        id: 11,
         href: "/reviews/beabadoobee-fake-it-flowers/",
         reviewImage: "/assets/beabadoobee_fakeitflowers.jpg",
         albumTitle: "Fake It Flowers",
@@ -96,6 +108,7 @@ const reviews = [
         reviewDate: "December 22, 2024"
     },
     {
+        id: 12,
         href: "/reviews/blank-banshee-blank-banshee-0/",
         reviewImage: "/assets/blankbanshee-blankbanshee0.jpeg",
         albumTitle: "Blank Banshee 0",
@@ -104,6 +117,7 @@ const reviews = [
         reviewDate: "December 27, 2024"
     },
     {
+        id: 13,
         href: "/reviews/tate-mcrae-think-later/",
         reviewImage: "/assets/tatemcrae-thinklater.png",
         albumTitle: "Think Later",
@@ -112,6 +126,7 @@ const reviews = [
         reviewDate: "December 27, 2024"
     },
     {
+        id: 14,
         href: "/reviews/the-1975-the-1975/",
         reviewImage: "/assets/the1975-the1975.jpg",
         albumTitle: "The 1975",
@@ -120,6 +135,7 @@ const reviews = [
         reviewDate: "December 27, 2024"
     },
     {
+        id: 15,
         href: "/reviews/gracie-abrams-the-secret-of-us/",
         reviewImage: "/assets/gracieabrams-thesecretofus.jpg",
         albumTitle: "The Secret of Us",
@@ -128,6 +144,7 @@ const reviews = [
         reviewDate: "December 28, 2024"
     },
     {
+        id: 16,
         href: "/reviews/pom-pom-squad-mirror-starts-moving-without-me/",
         reviewImage: "/assets/pompomsquad-mirrorstartsmovingwithoutme.jpg",
         albumTitle: "Mirror Starts Moving Without Me",
@@ -136,6 +153,7 @@ const reviews = [
         reviewDate: "January 3, 2025"
     },
     {
+        id: 17,
         href: "/reviews/blood-cultures-happy-birthday/",
         reviewImage: "/assets/bloodcultures-happybirthday.jpg",
         albumTitle: "Happy Birthday",
@@ -144,11 +162,21 @@ const reviews = [
         reviewDate: "January 3, 2025"
     },
     {
+        id: 18,
         href: "/reviews/basement-jaxx-rooty/",
         reviewImage: "/assets/basementjaxx_rooty.jpg",
         albumTitle: "Rooty",
         albumArtist: "Basement Jaxx",
         author: "Marl Jonson",
         reviewDate: "January 31, 2025"
+    },
+    {
+        id: 19,
+        href: "/reviews/maroon-5-it-wont-be-soon-before-long/",
+        reviewImage: "/assets/maroon5_itwontbesoonbeforelong.jpg",
+        albumTitle: "It Wont Be Soon Before Long",
+        albumArtist: "Maroon 5",
+        author: "Marl Jonson",
+        reviewDate: "February 7, 2025"
     }
 ];
